@@ -1,0 +1,18 @@
+<div class="product-list__container">
+    <table>
+        <tr>
+            <th>
+                Product Title
+            </th>
+            <th>
+                Product Price
+            </th>
+        </tr>
+        <tr v-for="productItem in getProductItems()">
+            <td>{{ productItem.title }}</td>
+            <td>
+                <price-currency-display :priceValue="productItem.price"></price-currency-display>
+            </td>
+        </tr>
+    </table>
+</div>
